@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int	ft_recursive_factorial(int nb)
 {
 	if (nb == 0 || nb == 1)
@@ -11,12 +9,4 @@ int	ft_recursive_factorial(int nb)
 		return  0;
 	}
 	return nb * ft_recursive_factorial(nb - 1);
-}
-
-int	main(void)
-{
-	int	to_print;
-
-	to_print = ft_recursive_factorial(1);
-	printf("%d\n", to_print);
 }
