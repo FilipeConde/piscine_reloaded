@@ -1,5 +1,3 @@
-#include <stdio.h>
-
 int	ft_iterative_factorial(int nb)
 {
 	int	result;
@@ -19,12 +17,4 @@ int	ft_iterative_factorial(int nb)
 		nb--;
 	}
 	return result;
-}
-
-int	main(void)
-{
-
-	int	to_print;
-	to_print = ft_iterative_factorial(-3);
-	printf("%d\n", to_print);
 }
