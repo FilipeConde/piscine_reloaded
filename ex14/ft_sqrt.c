@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strt.c                                          :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fconde-p <fconde-p@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 08:32:03 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/07/15 08:57:56 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/07/15 10:18:36 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,19 @@ int	ft_sqrt(int nb)
 		}
 		curr_num--;
 	}
+	return 0;
 }
 
 int	main(void)
 {
 	int	result;
 
-	result = ft_sqrt(9);
-	printf("%d", result);
+	result = ft_sqrt(8);
+	printf("%d\n", result);
+
+	result = ft_sqrt(-9);
+        printf("%d\n", result);
+
+	result = ft_sqrt(225);
+        printf("%d\n", result);
 }
