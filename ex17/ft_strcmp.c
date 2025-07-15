@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 11:07:16 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/07/15 11:29:04 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/07/15 19:55:23 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@ int	ft_strcmp(char *s1, char *s2)
 	int	i;
 
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0')
+	while (s1[i] != '\0' || s2[i] != '\0')
 	{
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
 		i++;
 	}
-	if (s1[i] == '\0' && s2[i] == '\0')
-		return (0);
-	if (s1[i] == '\0')
-		return (s2[i] * (-1));
-	else
-		return (s1[i] * 1);
+	return (0);
 }
