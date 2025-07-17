@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 08:40:33 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/07/17 14:51:38 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/07/17 15:06:53 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,15 @@ int	ft_strcmp(char *s1, char *s2)
 	return (0);
 }
 
+void	ft_print_string(char *s)
+{
+	while (*s)
+	{
+		ft_putchar(*s);
+		s++;
+	}
+}
+
 int	main(int argc, char *argv[])
 {
 	int	i;
@@ -56,12 +65,13 @@ int	main(int argc, char *argv[])
 	{
 		while (index_arr[i])
 		{
-			int	x;
+//			int	x;
 
-			x = 0;
+//			x = 0;
 			while (*argv[index_arr[i]])
 			{
-				ft_putchar(argv[index_arr[i]][x]);
+//				ft_putchar(argv[index_arr[i]][x]);
+				ft_print_string(argv[index_arr[i]]);
 				argv[index_arr[i]]++;
 			}
 			i++;
