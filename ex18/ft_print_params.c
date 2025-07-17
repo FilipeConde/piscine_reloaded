@@ -6,16 +6,11 @@
 /*   By: fconde-p <fconde-p@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 08:34:50 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/07/17 08:34:57 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/07/17 08:42:25 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
 int	main(int argc, char *argv[])
 {
