@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fconde-p <fconde-p@student.42sp.org.b      +#+  +:+       +#+        */
+/*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 08:40:33 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/07/17 15:06:53 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/07/18 22:31:49 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,51 +33,43 @@ int	ft_strcmp(char *s1, char *s2)
 	return (0);
 }
 
-void	ft_print_string(char *s)
+void	ft_print_params(int qty, char **s)
 {
-	while (*s)
+	int	i;
+
+	i = 1;
+	while (i < qty)
 	{
-		ft_putchar(*s);
-		s++;
+		while (*s[i])
+		{
+			ft_putchar(*s[i]);
+			s[i]++;
+		}
+		ft_putchar('\n');
+		i++;
 	}
 }
 
 int	main(int argc, char *argv[])
 {
-	int	i;
-	int	index_arr[argc - 1];
+	int		i;
+	int		j;
+	char	*temp;
 
-	i = 1;
-	while (index_arr[i])
+	i = 0;
+	j = 0;
+	while (++i < argc)
 	{
-		int	temp;
-
-		temp = 0;
-		if (ft_strcmp(argv[i], argv[i + 1]) > 0)
+		j = 0;
+		while (++j < argc)
 		{
-			temp = index_arr[i + 1];
-			index_arr[i + 1] = index_arr[i];
-			index_arr[i] = temp;
-		}
-		i++;
-	}
-	while (i < argc)
-	{
-		while (index_arr[i])
-		{
-//			int	x;
-
-//			x = 0;
-			while (*argv[index_arr[i]])
+			if (ft_strcmp(argv[i], argv[j]) < 0)
 			{
-//				ft_putchar(argv[index_arr[i]][x]);
-				ft_print_string(argv[index_arr[i]]);
-				argv[index_arr[i]]++;
+				temp = argv[i];
+				argv[i] = argv[j];
+				argv[j] = temp;
 			}
-			i++;
-			ft_putchar('\n');
 		}
-//		ft_putchar('\n');
-		i++;
-	}	
+	}
+	ft_print_params(argc, argv);
 }
