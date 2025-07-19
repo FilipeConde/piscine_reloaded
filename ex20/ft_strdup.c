@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 11:13:27 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/07/19 12:52:21 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/07/19 13:45:12 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	ft_strlen(char *str)
 	i = 0;
 	while (*str)
 	{
+		str++;
 		i++;
 	}
 	return (i);
@@ -33,13 +34,12 @@ char	*ft_strdup(char *src)
 	return (result);
 }
 
-//#include <stdio.h>
+// #include <stdio.h>
 // int	main(void)
 // {
-// 	char	*src = " testè";
-// 	char	*new_str;
-
-// 	new_str = (src);
-// 	printf("%s\n", src);
-// 	printf("%s\n", new_str);
-//}
+	// char	*src = " testè";
+	// char	*new_str;
+	// new_str = ft_strdup(src);
+	// printf("%s\n", src);
+	// printf("%s\n", new_str);
+// }
