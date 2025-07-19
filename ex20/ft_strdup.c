@@ -6,9 +6,11 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 11:13:27 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/07/19 12:39:27 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/07/19 12:52:21 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 int	ft_strlen(char *str)
 {
@@ -18,29 +20,26 @@ int	ft_strlen(char *str)
 	while (*str)
 	{
 		i++;
-		*str++;
 	}
 	return (i);
 }
-/*
+
 char	*ft_strdup(char *src)
 {
 	char	*result;
 
-	result = 
-
+	result = (char *) malloc(ft_strlen(src) * sizeof(char));
+	result = src;
 	return (result);
 }
-*/
-#include <stdio.h>
 
-int	main(void)
-{
-	char	*src = "test";
-	// char	*new_str;
+//#include <stdio.h>
+// int	main(void)
+// {
+// 	char	*src = " testè";
+// 	char	*new_str;
 
-	// printf("%s", src);
-	// printf("%s", new_str);
-
-	printf("%d", ft_strlen(src));
-}
+// 	new_str = (src);
+// 	printf("%s\n", src);
+// 	printf("%s\n", new_str);
+//}
