@@ -6,11 +6,9 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/15 08:32:03 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/07/19 13:08:47 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/07/19 13:35:11 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// #include <math.h>
 
 int	ft_sqrt(int nb)
 {
@@ -21,7 +19,7 @@ int	ft_sqrt(int nb)
 		return (0);
 	}
 	sqroot = 1;
-	while (sqroot >= 1)
+	while (sqroot >= 1 && sqroot <= (nb / 2 + 1))
 	{
 		if (sqroot * sqroot == nb)
 		{
@@ -32,6 +30,7 @@ int	ft_sqrt(int nb)
 	return (0);
 }
 
+// #include <stdio.h>
 // int	main(void)
 // {
 // 	int	n;
@@ -45,6 +44,8 @@ int	ft_sqrt(int nb)
 // 	printf("%d\n", ft_sqrt(n));
 // 	n = 8;
 // 	printf("%d\n", ft_sqrt(n));
-// 	n = 330123790096;
+// 	n = 121;
+// 	printf("%d\n", ft_sqrt(n));
+// 	n = 574564;
 // 	printf("%d\n", ft_sqrt(n));
 // }
