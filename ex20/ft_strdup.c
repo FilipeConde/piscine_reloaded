@@ -6,7 +6,7 @@
 /*   By: fconde-p <fconde-p@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 11:13:27 by fconde-p          #+#    #+#             */
-/*   Updated: 2025/07/19 13:45:12 by fconde-p         ###   ########.fr       */
+/*   Updated: 2025/07/20 11:07:54 by fconde-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,37 @@ int	ft_strlen(char *str)
 char	*ft_strdup(char *src)
 {
 	char	*result;
+	int	i;
 
+	i = 0;
 	result = (char *) malloc(ft_strlen(src) * sizeof(char));
-	result = src;
+//	New aproach: copy the content instead to set the mem address.
+//	result = src;
+	if (src[0] == '\0')
+	{
+		result[0] = '\0';
+		return (result);
+	}
+	while (src[i] != '\0')
+	{
+		result[i] = src[i];
+		i++;
+	}
+	
 	return (result);
 }
 
-// #include <stdio.h>
-// int	main(void)
-// {
-	// char	*src = " testè";
-	// char	*new_str;
-	// new_str = ft_strdup(src);
-	// printf("%s\n", src);
-	// printf("%s\n", new_str);
-// }
+#include <stdio.h>
+#include <string.h>
+int	main(void)
+{
+	char	*src = "\0";
+	char	*new_str;
+	new_str = ft_strdup(src);
+	printf("%s\n", src);
+	printf("%s\n\n", new_str);
+
+	new_str = strdup(src);
+	printf("%s\n", src);
+	printf("%s\n", new_str);
+}
